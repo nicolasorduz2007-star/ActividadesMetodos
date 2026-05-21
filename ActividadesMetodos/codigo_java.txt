@@ -1,0 +1,57 @@
+// Clase principal llamada ActividadesMetodos
+import java.util.Scanner;
+
+public class ActividadesMetodos {
+
+    // Método que muestra un mensaje en consola
+    public static void mostrarMensaje(String mensaje) {
+        System.out.println(mensaje);
+    }
+
+    // Método que imprime los días de la semana
+    public static void mostrarDiasSemana() {
+
+        System.out.println("Lunes");
+        System.out.println("Martes");
+        System.out.println("Miércoles");
+        System.out.println("Jueves");
+        System.out.println("Viernes");
+        System.out.println("Sábado");
+        System.out.println("Domingo");
+    }
+
+    // Método que imprime la tabla de multiplicar
+    public static void imprimirTablaMultiplicar(int numero) {
+
+        // Ciclo para multiplicar del 1 al 10
+        for (int i = 1; i <= 10; i++) {
+
+            System.out.println(numero + " x " + i + " = " + (numero * i));
+        }
+    }
+
+    // Método principal
+    public static void main(String[] args) {
+
+        // Llamado al método mostrarMensaje
+        mostrarMensaje("Bienvenido al programa de métodos sin retorno");
+
+        System.out.println();
+
+        // Llamado al método mostrarDiasSemana
+        mostrarDiasSemana();
+
+        System.out.println();
+
+        // Crear un Scanner para leer entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingresa el número para la tabla de multiplicar: ");
+        int numero = scanner.nextInt();
+
+        // Llamado al método imprimirTablaMultiplicar
+        imprimirTablaMultiplicar(numero);
+        
+        // Cerrar el Scanner
+        scanner.close();
+    }
+}
